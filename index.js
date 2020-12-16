@@ -32,7 +32,7 @@ client.on("guildMemberRemove", (member) => {
 
 client.on('messageDelete', async message => {
   
-  message.channel.send(`<@!${message.content}> 를 \`${message.author.id}\`님이  삭제하셨습니다.`)
+  message.channel.send(`${message.content} 를 \`<@!${message.author.id}\`님이  삭제하셨습니다.`)
 })
 
 client.on("message", (message) => {
