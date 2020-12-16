@@ -41,10 +41,6 @@ client.on("message", (message) => {
    return message.reply(`https://tenor.com/view/happy-cat-cats-cute-pet-gif-5274231`)
   }
 
-  client.on('messageDelete', async message => {
-    
-  })
-
   if (message.content == "!서버") {
     let embed = new Discord.MessageEmbed()
     let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
