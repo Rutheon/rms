@@ -91,8 +91,8 @@ client.on("message", (message) => {
       { name: "!전체공지", desc: "dm으로 전체 공지 보내기" },
       { name: "!전체공지2", desc: "dm으로 전체 embed 형식으로 공지 보내기" },
       { name: "!청소", desc: "채팅청소할꺼야!너무드러워" },
-      { name: "!초대코드", desc: "해당 채널의 초대 코드 표기" },
-      { name: "!초대코드2", desc: "봇이 들어가있는 모든 채널의 초대 코드 표기" },
+      { name: "!초대", desc: "해당 채널의 초대 코드 표기" },
+      { name: "!초대2", desc: "봇이 들어가있는 모든 채널의 초대 코드 표기" },
     ]
     let commandStr = ""
     let embed = new Discord.MessageEmbed().setAuthor("Help of 근찌 BOT", helpImg).setColor("#186de6").setFooter(` 근찌BOT ❤️`).setTimestamp()
@@ -104,7 +104,7 @@ client.on("message", (message) => {
     embed.addField("Commands: ", commandStr)
 
     message.channel.send(embed)
-  } else if (message.content == "!초대코드2") {
+  } else if (message.content == "!초대2") {
     client.guilds.cache.array().forEach((x) => {
       x.channels.cache
         .find((x) => x.type == "text")
@@ -118,7 +118,7 @@ client.on("message", (message) => {
           }
         })
     })
-  } else if (message.content == "!초대코드") {
+  } else if (message.content == "!초대") {
     if (message.channel.type == "dm") {
       return message.reply("dm에서 사용할 수 없는 명령어 입니다.")
     }
@@ -133,11 +133,11 @@ client.on("message", (message) => {
           message.channel.send(`**${message.guild.channels.cache.get(message.channel.id).guild.name}** 채널 권한이 없어 초대코드 발행 실패`)
         }
       })
-  } else if (message.content.startsWith("!전체공지2")) {
+  } else if (message.content.startsWith("!공지2")) {
     if (checkPermission(message)) return
     if (message.member != null) {
       // 채널에서 공지 쓸 때
-      let contents = message.content.slice("!전체공지2".length)
+      let contents = message.content.slice("!공지2".length)
       let embed = new Discord.MessageEmbed().setAuthor("공지 of 콜라곰 BOT").setColor("#186de6").setFooter(`콜라곰 BOT ❤️`).setTimestamp()
 
       embed.addField("공지: ", contents)
@@ -155,7 +155,7 @@ client.on("message", (message) => {
     if (checkPermission(message)) return
     if (message.member != null) {
       // 채널에서 공지 쓸 때
-      let contents = message.content.slice("!전체공지".length)
+      let contents = message.content.slice("!공지".length)
       message.member.guild.members.cache.array().forEach((x) => {
         if (x.user.bot) return
         x.user.send(`<@${message.author.id}> ${contents}`)
