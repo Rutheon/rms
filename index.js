@@ -1,13 +1,13 @@
 const Discord = require("discord.js")
 const intent_list = new Discord.Intents(["GUILD_MEMBERS", "GUILD_MESSAGES", "GUILDS", "GUILD_INVITES"])
 const client = new Discord.Client({ ws: { intents: intent_list } })
-const token = process.env.token;
+const token = "Nzg3MjMyNzUwMTA1MTMzMDk2.X9R9oQ.MycK1dOvNFgM8wl5pBDQRjsBFz0"
 const welcomeChannelName = "안녕하세요" // 입장 시 환영메시지를 전송 할 채널의 이름을 입력하세요.
 const byeChannelName = "안녕히가세요" // 퇴장 시 메시지를 전송 할 채널의 이름을 입력하세요.
 const welcomeChannelComment = "어서오세요." // 입장 시 전송할 환영메시지의 내용을 입력하세요.
 const byeChannelComment = "안녕히가세요." // 퇴장 시 전송할 메시지의 내용을 입력하세요.
 const roleName = "소듕🥥" // 입장 시 지급 할 역할의 이름을 적어주세요.
-
+//임시 토큰 process.env.token;
 client.on("ready", () => {
   console.log("켰다.")
   client.user.setPresence({ activity: { name: "!도움말 을 쳐보세요" }, status: "online" })
@@ -35,21 +35,17 @@ client.on('messageDelete', async message => {
 
 })
 
-client.on('messageDelete', async message => {
-  message.channel.send(`<@!${message.author.id}> 님이 \`${message.content}\` 을(를) 삭제하셨습니다.`)
-})
-
 client.on("message", (message) => {
   if (message.author.bot) return
 
   if (message.content == "ping") {
-    return message.reply("pong")
+    message.channel.send("pong")
   }
 
   if (message.content == "!서버") {
     let embed = new Discord.MessageEmbed()
-    let img = "https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256"
-    var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]")
+    let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
+    let duration = 
     embed.setColor("#186de6")
     embed.setAuthor("server info of 근찌 BOT", img)
     embed.setFooter(`근찌 BOT ❤️`)
@@ -89,7 +85,7 @@ client.on("message", (message) => {
       .addField("디스코드", "https://discord.com/invite/yskSpbGWTe", true)
       .addField("게임정보", "레인보우식스시즈\n블랙서바이벌\n그 외 다양한 게임을 하신다\n")
       .setTimestamp()
-      .setFooter("제작자:JK416.wHL", img)
+      .setFooter("제작자:HK416.wHL", img)
 
     message.channel.send(embed)
   } 
