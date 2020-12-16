@@ -30,6 +30,11 @@ client.on("guildMemberRemove", (member) => {
   byeChannel.send(`<@${deleteUser.id}> ${byeChannelComment}\n`) // 올바른 채널명을 기입하지 않았다면, Cannot read property 'send' of undefined; 오류가 발생합니다.
 })
 
+client.on('messageDelete', async message => {
+  
+  message.channel.send(`<@!${message.content}> 를 \`${message.author.id}\`님이  삭제하셨습니다.`)
+})
+
 client.on("message", (message) => {
   if (message.author.bot) return
 
@@ -37,7 +42,7 @@ client.on("message", (message) => {
     return message.reply("pong")
   }
 
-  if (message.content == "!서버정보") {
+  if (message.content == "!서버") {
     let embed = new Discord.MessageEmbed()
     let img = "https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256"
     var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]")
@@ -68,18 +73,19 @@ client.on("message", (message) => {
   }
 
   if (message.content == "!근찌정보") {
-    let img = "https://cdn.discordapp.com/attachments/756326812841279572/788349823925485578/649dcd38dfc1ec0b.png"
+    let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
     let embed = new Discord.MessageEmbed()
-      .setTitle("타이틀")
-      .setURL("http://www.naver.com")
-      .setAuthor("근찌", img, "http://www.naver.com")
+    embed.setColor("#FF8E8E")
+      .setTitle("생방송")
+      .setURL("https://www.twitch.tv/geunzzi_")
+      .setAuthor("근찌", img, "https://www.twitch.tv/geunzzi_")
       .setThumbnail(img)
       .addField("현재 팔로워", "84명")
       .addField("트윕", "https://twip.kr/geunzzi_", true)
       .addField("디스코드", "https://discord.com/invite/yskSpbGWTe", true)
       .addField("게임정보", "레인보우식스시즈\n블랙서바이벌\n그 외 다양한 게임을 하신다\n")
       .setTimestamp()
-      .setFooter("", img)
+      .setFooter("제작자:JK416.wHL", img)
 
     message.channel.send(embed)
   } else if (message.content == "!도움말") {
@@ -93,9 +99,11 @@ client.on("message", (message) => {
       { name: "!청소", desc: "채팅청소할꺼야!너무드러워" },
       { name: "!초대", desc: "해당 채널의 초대 코드 표기" },
       { name: "!초대2", desc: "봇이 들어가있는 모든 채널의 초대 코드 표기" },
+      { name: "!서버", desc: "해당 서버의 정보를 보여줍니다."},
+
     ]
     let commandStr = ""
-    let embed = new Discord.MessageEmbed().setAuthor("Help of 근찌 BOT", helpImg).setColor("#186de6").setFooter(` 근찌BOT ❤️`).setTimestamp()
+    let embed = new Discord.MessageEmbed().setAuthor("Help of 근찌 BOT", helpImg).setColor("#FF8E8E").setFooter(` 근찌BOT ❤️`).setTimestamp()
 
     commandList.forEach((x) => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`
