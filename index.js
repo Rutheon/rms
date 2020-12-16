@@ -31,8 +31,12 @@ client.on("guildMemberRemove", (member) => {
 })
 
 client.on('messageDelete', async message => {
-  
-  message.channel.send(`${message.content} 를 \`<@!${message.author.id}\`님이  삭제하셨습니다.`)
+
+
+})
+
+client.on('messageDelete', async message => {
+  message.channel.send(`<@!${message.author.id}> 님이 \`${message.content}\` 을(를) 삭제하셨습니다.`)
 })
 
 client.on("message", (message) => {
@@ -88,7 +92,11 @@ client.on("message", (message) => {
       .setFooter("제작자:JK416.wHL", img)
 
     message.channel.send(embed)
-  } else if (message.content == "!도움말") {
+  } 
+  
+  
+  
+  else if (message.content == "!도움말") {
     let helpImg = "https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png"
     let commandList = [
       { name: "!도움말", desc: "근찌봇 명령어를 알려줍니다" },
@@ -146,7 +154,7 @@ client.on("message", (message) => {
     if (message.member != null) {
       // 채널에서 공지 쓸 때
       let contents = message.content.slice("!공지2".length)
-      let embed = new Discord.MessageEmbed().setAuthor("공지 of 콜라곰 BOT").setColor("#186de6").setFooter(`콜라곰 BOT ❤️`).setTimestamp()
+      let embed = new Discord.MessageEmbed().setAuthor("공지 of 근찌 BOT").setColor("#186de6").setFooter(`근찌 BOT ❤️`).setTimestamp()
 
       embed.addField("공지: ", contents)
 
