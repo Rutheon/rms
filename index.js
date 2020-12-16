@@ -30,16 +30,15 @@ client.on("guildMemberRemove", (member) => {
   byeChannel.send(`<@${deleteUser.id}> ${byeChannelComment}\n`) // 올바른 채널명을 기입하지 않았다면, Cannot read property 'send' of undefined; 오류가 발생합니다.
 })
 
-client.on('messageDelete', async message => {
-
-
-})
-
 client.on("message", (message) => {
   if (message.author.bot) return
 
   if (message.content == "ping") {
     message.channel.send("pong")
+  }
+
+  if (message.content == "고냥이") {
+    message.channel.send("https://tenor.com/view/happy-cat-cats-cute-pet-gif-5274231")
   }
 
   if (message.content == "!서버") {
