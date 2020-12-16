@@ -9,7 +9,7 @@ const byeChannelComment = "안녕히가세요." // 퇴장 시 전송할 메시�
 const roleName = "소듕🥥" // 입장 시 지급 할 역할의 이름을 적어주세요.
 //임시 토큰 process.env.token;
 client.on("ready", () => {
-  console.log("켰다.")
+  console.log("켰다...")
   client.user.setPresence({ activity: { name: "!도움말 을 쳐보세요" }, status: "online" })
 })
 
