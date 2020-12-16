@@ -38,8 +38,9 @@ client.on("message", (message) => {
   }
 
   client.on('messageDelete', async message => {
-  
-    message.channel.send(`https://tenor.com/view/happy-cat-cats-cute-pet-gif-5274231`)
+    if (message.content == "고냥이"){
+      message.channel.send(`https://tenor.com/view/happy-cat-cats-cute-pet-gif-5274231`)
+    }
   })
 
   if (message.content == "!서버") {
