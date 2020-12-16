@@ -34,7 +34,7 @@ client.on("message", (message) => {
   if (message.author.bot) return
 
   if (message.content == "ping") {
-    message.channel.send("pong")
+    return message.channel.send("pong")
   }
 
   if (message.content == "고냥이") {
