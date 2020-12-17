@@ -4,7 +4,7 @@ const client = new Discord.Client({ ws: { intents: intent_list } })
 const token = process.env.token;
 const welcomeChannelName = "🎊어서왕🎉" // 입장 시 환영메시지를 전송 할 채널의 이름을 입력하세요.
 const byeChannelName = "안녕히가세요" // 퇴장 시 메시지를 전송 할 채널의 이름을 입력하세요.
-const welcomeChannelComment = `<@${user}> 님 안녕하세요` // 입장 시 전송할 환영메시지의 내용을 입력하세요.
+const welcomeChannelComment = "안녕하세요 방가방가~" // 입장 시 전송할 환영메시지의 내용을 입력하세요.
 const byeChannelComment = "안녕히가세요." // 퇴장 시 전송할 메시지의 내용을 입력하세요.
 const roleName = "소듕🥥" // 입장 시 지급 할 역할의 이름을 적어주세요.
 //임시 토큰 process.env.token;
