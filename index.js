@@ -45,6 +45,12 @@ client.on("message", (message) => {
     return message.reply("https://tenor.com/view/birthday-happy-birthday-cat-gif-4997651")
   }
 
+  if(message.content == '음') {
+    message.channel.send('움').then(msg => {
+        msg.react(':4_:')
+    })
+}
+
   if (message.content == "!서버") {
     let embed = new Discord.MessageEmbed()
     let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
