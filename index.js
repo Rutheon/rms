@@ -92,14 +92,6 @@ client.on("message", (message) => {
 
     message.channel.send(embed)
   } 
-
-  if(message.content == "!버전") {
-    let embed = new Discord.MessageEmbed()
-    embed.setColor("#FF8E8E")
-    .setTitle("현재버전")
-    .addField('Old Message:', oldMessage.content)
-    message.channel.send(embed)
-  }
   
   else if (message.content == "!도움말") {
     let helpImg = "https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png"
