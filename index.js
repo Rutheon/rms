@@ -92,6 +92,20 @@ client.on("message", (message) => {
 
     message.channel.send(embed)
   } 
+
+  if (message.content == "!악질유저") {
+    let img = "https://cdn.discordapp.com/attachments/756326812841279572/790565372632760330/38e2f8f8445ec57636e6f2133228ee5d32d5aa316f3afc85afa8e4ae8c24f63d9d3b2a60945a776682941e178cad6a8f64dc.png"
+    let embed = new Discord.MessageEmbed()
+    embed.setColor("#FF8E8E")
+    .setTitle("악질유저목록")
+    .setAuthor("배틀아이", img, "https://namu.wiki/w/%EB%B0%B0%ED%8B%80%EC%95%84%EC%9D%B4")
+    .setThumbnail(img)
+    .addField("유저이름", "coin0113")
+    .addField("이유", "욕설(패드립 그외 기타등등),팀킬")
+    .addField("그외 악질 유저 제보는 개발자에게 알려주세요", "나쁜짓은 나빠")
+    .setFooter("제작자:HK416.KOR", img)
+    message.channel.send(embed)
+  }
   
   else if (message.content == "!도움말") {
     let helpImg = "https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png"
