@@ -6,7 +6,7 @@ const welcomeChannelName = "🎊어서왕🎉" // 입장 시 환영메시지를 
 const byeChannelName = "안녕히가세요" // 퇴장 시 메시지를 전송 할 채널의 이름을 입력하세요.
 const welcomeChannelComment = "안녕하세요 방가방가~" // 입장 시 전송할 환영메시지의 내용을 입력하세요.
 const byeChannelComment = "안녕히가세요." // 퇴장 시 전송할 메시지의 내용을 입력하세요.
-const roleName = "소듕🥥" // 입장 시 지급 할 역할의 이름을 적어주세요.
+const roleName = "💙 소중 💙" // 입장 시 지급 할 역할의 이름을 적어주세요.
 //임시 토큰 process.env.token;
 client.on("ready", () => {
   console.log("켰다...")
@@ -45,17 +45,11 @@ client.on("message", (message) => {
     return message.reply("https://tenor.com/view/birthday-happy-birthday-cat-gif-4997651")
   }
 
-  if(message.content == '음') {
-    message.channel.send('움').then(msg => {
-        msg.react(':4_:')
-    })
-}
-
   if (message.content == "!서버") {
     let embed = new Discord.MessageEmbed()
     let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
     let duration = 
-    embed.setColor("#186de6")
+    embed.setColor("#FF8E8E")
     embed.setAuthor("server info of 근찌 BOT", img)
     embed.setFooter(`근찌 BOT ❤️`)
     embed.addField("RAM usage", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, true)
@@ -89,7 +83,7 @@ client.on("message", (message) => {
       .setURL("https://www.twitch.tv/geunzzi_")
       .setAuthor("근찌", img, "https://www.twitch.tv/geunzzi_")
       .setThumbnail(img)
-      .addField("현재 팔로워", "84명")
+      .addField("현재 팔로워", "104명")
       .addField("트윕", "https://twip.kr/geunzzi_", true)
       .addField("디스코드", "https://discord.com/invite/yskSpbGWTe", true)
       .addField("게임정보", "레인보우식스시즈\n블랙서바이벌\n그 외 다양한 게임을 하신다\n")
@@ -98,8 +92,14 @@ client.on("message", (message) => {
 
     message.channel.send(embed)
   } 
-  
-  
+
+  if(message.content == "!버전") {
+    let embed = new Discord.MessageEmbed()
+    embed.setColor("#FF8E8E")
+    .setTitle("현재버전")
+    .addField("버전", `버전`.content)
+    message.channel.send(embed)
+  }
   
   else if (message.content == "!도움말") {
     let helpImg = "https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png"
