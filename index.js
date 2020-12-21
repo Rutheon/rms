@@ -97,7 +97,7 @@ client.on("message", (message) => {
     let embed = new Discord.MessageEmbed()
     embed.setColor("#FF8E8E")
     .setTitle("현재버전")
-    .addField("버전", 버전.content)
+    .addField('Old Message:', oldMessage.content)
     message.channel.send(embed)
   }
   
