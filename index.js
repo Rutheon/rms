@@ -102,7 +102,7 @@ client.on("message", (message) => {
     .setThumbnail(img)
     .addField("유저이름", "coin0113")
     .addField("이유", "욕설(패드립 그외 기타등등),팀킬")
-    .addField("그외 악질 유저 제보는 개발자에게 알려주세요", "나쁜짓은 나빠")
+    .addField("그외 악질 유저 제보는 개발자에게 알려주세요", "나쁜짓은 하지마")
     .setFooter("제작자:HK416.KOR", img)
     message.channel.send(embed)
   }
