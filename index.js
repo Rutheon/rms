@@ -94,6 +94,23 @@ client.on("message", (message) => {
     message.channel.send(embed)
   } 
 
+  if (message.content == "!뉴스") {
+    let img = "https://cdn.discordapp.com/attachments/756326812841279572/793063654957383690/ddbc49c14f90e600.PNG"
+    let opimg = "https://cdn.discordapp.com/attachments/793060334839267359/793070700252102686/-removebg-preview.png"
+    let embed = new Discord.MessageEmbed()
+    embed.setColor("#FF8E8E")
+    .setTitle("개발자의 말씀")
+    .setURL("https://youtu.be/6IDpKVF6LwQ")
+    .setAuthor("개발자", opimg, "https://youtu.be/6IDpKVF6LwQ")
+    .setThumbnail(img)
+    .addField("개발소식", "현재 개발자는 근찌봇2.0을 제작중 이며 2021년3월쯤 공개한다고 전했습니다.")
+    .addField("근찌봇소식", "전에 한번 근찌봇 코드가 망가져서 고쳤는데 그때 몇개 기능을 못넣었습니다. 그래서 현재는 복구중이라합니다")
+    .addField("1분 싸이버 보안상식", "블랙해커들은 이메일 또는 사이트링크 또는 문자로 수상한 링크를 줘서 개인정보를 탈취하기때문에 의심가능 링크는 누르지마세요")
+    .setFooter("제작자:화이트해커",opimg )
+  
+     message.channel.send(embed)
+  }
+
   if (message.content == "!악질유저") {
     let img = "https://cdn.discordapp.com/attachments/756326812841279572/790565372632760330/38e2f8f8445ec57636e6f2133228ee5d32d5aa316f3afc85afa8e4ae8c24f63d9d3b2a60945a776682941e178cad6a8f64dc.png"
     let embed = new Discord.MessageEmbed()
@@ -120,6 +137,7 @@ client.on("message", (message) => {
       { name: "!초대", desc: "해당 채널의 초대 코드 표기" },
       { name: "!초대2", desc: "봇이 들어가있는 모든 채널의 초대 코드 표기" },
       { name: "!서버", desc: "해당 서버의 정보를 보여줍니다."},
+      { name: "!뉴스", desc: "근찌봇 관련 뉴스를 전해드려요"},
 
     ]
     let commandStr = ""
