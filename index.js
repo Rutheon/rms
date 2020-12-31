@@ -10,7 +10,7 @@ const roleName = "💙 소중 💙" // 입장 시 지급 할 역할의 이름을
 //임시 토큰 process.env.token;
 client.on("ready", () => {
   console.log("켰다...")
-  client.user.setPresence({ activity: { name: "!도움말 을 쳐보세요" }, status: "online" })
+  client.user.setPresence({ activity: { name: "새새해복 많이 받으세요~!" }, status: "online" })
 })
 
 client.on("guildMemberAdd", (member) => {
@@ -45,8 +45,8 @@ client.on("message", (message) => {
     return message.reply("https://tenor.com/view/birthday-happy-birthday-cat-gif-4997651")
   }
 
-  if (message.content == "야근찌봇너도한마디해") {
-    return message.reply("여러분들 새해복 많이받으시고 건강하세요~")
+  if (message.content == "새해복") {
+    return message.reply("")
   }
 
   if (message.content =="ㅅㅂ") {
