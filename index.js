@@ -158,10 +158,50 @@ client.on("message", (message) => {
     .setThumbnail(img)
     .addField("개발소식", "현재 개발자는 근찌봇2.0을 제작중 이며 2021년3월쯤 공개한다고 전했습니다.")
     .addField("근찌봇소식", "전에 한번 근찌봇 코드가 망가져서 고쳤는데 그때 몇개 기능을 못넣었습니다. 그래서 현재는 복구중이라합니다")
-    .addField("1분 싸이버 보안상식", "블랙해커들은 이메일 또는 사이트링크 또는 문자로 수상한 링크를 줘서 개인정보를 탈취하기때문에 의심가능 링크는 누르지마세요")
+    .addField("1분 싸이버 보안상식", "이상한링크 클릭 ㄴㄴ")
     .setFooter("제작자:화이트해커",opimg )
   
      message.channel.send(embed)
+  }
+
+  if (message.content == "!방송시간") {
+    let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png" 
+    let embed = new Discord.MessageEmbed()
+    embed.setColor("#FF8E8E")
+    .setTitle("생방송")
+      .setURL("https://www.twitch.tv/geunzzi_")
+      .setAuthor("근찌", img, "https://www.twitch.tv/geunzzi_")
+      .setThumbnail(img)
+      .addField("평일", "\n`월 - 금 : PM 08:00 ~ AM 12:00`")
+      .addField("휴일", "\n`토요일 : PM 10:00 ~ AM 02:00`")
+      .addField("공휴일", "\n`랜덤`")
+      .addField("기타", "대부분 이시간에 합니다\n휴방 하는 날도 있습니다")
+      .setFooter("제작자:화이트해커", img)
+
+      message.channel.send(embed)
+  }
+
+  if (message.content == "!방송규칙") {
+    let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png" 
+    let embed = new Discord.MessageEmbed()
+    embed.setColor("#FF8E8E")
+    .setTitle("생방송")
+      .setURL("https://www.twitch.tv/geunzzi_")
+      .setAuthor("근찌", img, "https://www.twitch.tv/geunzzi_")
+      .setThumbnail(img)
+      .addField("1", "\n`이 방송 주인공은 누구? 근찌임`")
+      .addField("1", "\n`시청자 간의 친목 금지입니다`")
+      .addField("1", "\n`도배, 시비, 싸우기 금지입니다`")
+      .addField("1", "\n`선 넘으면 '너 밴!' 입니다`")
+      .addField("1", "\n`지나친 훈수는 좋지 않습니다`")
+      .addField("1", "\n`타스트리머 언급 자제해 주세요`")
+      .addField("1", "\n`방송 도중 채팅에 나간다고 하지 마세요`")
+      .addField("1", "\n`지나친 TMI 궁금하지 않습니다`")
+      .addField("1", "\n`클립 많이 따주세요, 제목도 써주세요`")
+      .setFooter("제작자:화이트해커", img)
+      .setFooter("스트리머:근찌", img)
+
+      message.channel.send(embed)
   }
 
   if (message.content == "!악질유저") {
@@ -184,6 +224,8 @@ client.on("message", (message) => {
       { name: "!도움말", desc: "근찌봇 명령어를 알려줍니다" },
       { name: "ping", desc: "핑퐁~!" },
       { name: "!근찌정보", desc: "근찌님 정보를 보여줄수있어요!" },
+      { name: "!방송시간", desc: "근찌님이 언제 뱅온 하는지 알수있어요" },
+      { name: "!방송규칙", desc: "방송규칙을 알려줘요!"},
       { name: "!전체공지", desc: "dm으로 전체 공지 보내기" },
       { name: "!전체공지2", desc: "dm으로 전체 embed 형식으로 공지 보내기" },
       { name: "!청소", desc: "채팅청소할꺼야!너무드러워" },
