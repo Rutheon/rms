@@ -142,7 +142,7 @@ client.on("message", (message) => {
       .addField("생일", "11월22일")
       .addField("게임정보", "레인보우식스시즈\n블랙서바이벌\n그 외 다양한 게임을 하신다\n")
       .setTimestamp()
-      .setFooter("제작자:HK416.wHL", img)
+      .setFooter("제작자:화이트해커", img)
 
     message.channel.send(embed)
   } 
