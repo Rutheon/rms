@@ -254,7 +254,6 @@ client.on("message", (message) => {
       { name: "!초대2", desc: "봇이 들어가있는 모든 채널의 초대 코드 표기" },
       { name: "!서버", desc: "해당 서버의 정보를 보여줍니다."},
       { name: "!뉴스", desc: "근찌봇 관련 뉴스를 전해드려요"},
-
     ]
     let commandStr = ""
     let embed = new Discord.MessageEmbed().setAuthor("Help of 근찌 BOT", helpImg).setColor("#FF8E8E").setFooter(` 근찌BOT ❤️`).setTimestamp()
