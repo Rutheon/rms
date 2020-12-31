@@ -10,7 +10,7 @@ const roleName = "💙 소중 💙" // 입장 시 지급 할 역할의 이름을
 //임시 토큰 process.env.token;
 client.on("ready", () => {
   console.log("켰다...")
-  client.user.setPresence({ activity: { name: "새해복 많이 받으세요~!" }, status: "online" })
+  client.user.setPresence({ activity: { name: "새해복 많이 받으세요~!!" }, status: "online" })
 })
 
 client.on("guildMemberAdd", (member) => {
