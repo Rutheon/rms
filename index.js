@@ -45,6 +45,10 @@ client.on("message", (message) => {
     return message.reply("https://tenor.com/view/birthday-happy-birthday-cat-gif-4997651")
   }
 
+  if (message.content == "야근찌봇너도한마디해") {
+    return message.reply("여러분들 새해복 많이받으시고 건강하세요~")
+  }
+
   if (message.content =="ㅅㅂ") {
     return message.reply(`님이 \`${message.content}\` 을/를 보내셨습니다. \`욕쓰지마\``)
   }
