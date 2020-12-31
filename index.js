@@ -45,6 +45,58 @@ client.on("message", (message) => {
     return message.reply("https://tenor.com/view/birthday-happy-birthday-cat-gif-4997651")
   }
 
+  if (message.content =="ㅅㅂ") {
+    return message.reply(`님이 \`${message.content}\` 을/를 보내셨습니다. \`욕쓰지마\``)
+  }
+
+  if (message.content =="ㅄ") {
+    return message.reply(`님이 \`${message.content}\` 을/를 보내셨습니다. \`욕쓰지마세요\``)
+  }
+
+  if (message.content =="ㄳㄲ") {
+    return message.reply(` 님이 \`${message.content}\` 을/를 보내셨습니다. \`초성으로 욕하지마라\``)
+  }
+
+  if (message.content =="시발") {
+    return message.reply(`님이 \`${message.content}\` 을/를 보내셨습니다. \`욕하지마라\``)
+  }
+
+  if (message.content =="병신") {
+    return message.reply(`님이 \`${message.content}\` 을/를 보내셨습니다. \`그런 말쓰면 안돼\``)
+  }
+
+  if (message.content =="개새끼") {
+    return message.reply(`님이 \`${message.content}\` 을/를 보내셨습니다. \`보기 불편하다 쓰지마\``)
+  }
+
+  if (message.content =="ㅈㄲ") {
+    return message.reply(`님이 \`${message.content}\` 을/를 보내셨습니다. \`뜻을 알고 쓰냐?\``)
+  }
+
+  if (message.content =="좇까") {
+    return message.reply(`님이 \`${message.content}\` 을/를 보내셨습니다. \`진짜 실망이다\``)
+  }
+
+  if (message.content =="매갈") {
+    return message.reply(`님이 \`${message.content}\` 을/를 보내셨습니다. \`야 적당히 해라 왜 선넘냐?\``)
+  }
+
+  if (message.content =="미친놈") {
+    return message.reply(`님이 \`${message.content}\` 을/를 보내셨습니다. \`바른말쓰자\``)
+  }
+
+  if (message.content =="미친년") {
+    return message.reply(`님이 \`${message.content}\` 을/를 보내셨습니다. \`야 하지마라 난 분명말했다\``)
+  }
+
+  if (message.content =="일베") {
+    return message.reply(`님이 \`${message.content}\` 을/를 보내셨습니다. \`야 선은 지켜라\``)
+  }
+
+  if (message.content =="병신인가") {
+    return message.reply(`님이 \`${message.content}\` 을/를 보내셨습니다. \`상대방 기분 생각해서 말좀해라\``)
+  }
+
   if (message.content == "!서버") {
     let embed = new Discord.MessageEmbed()
     let img = "https://cdn.discordapp.com/attachments/756326812841279572/788595784648097841/eb9e63e96943a7dd.png"
