@@ -135,7 +135,7 @@ client.on("message", (message) => {
       .setURL("https://www.twitch.tv/geunzzi_")
       .setAuthor("근찌", img, "https://www.twitch.tv/geunzzi_")
       .setThumbnail(img)
-      .addField("현재 팔로워", "108명")
+      .addField("현재 팔로워", "109명")
       .addField("트윕", "https://twip.kr/geunzzi_", true)
       .addField("디스코드", "https://discord.com/invite/yskSpbGWTe", true)
       .addField("좋아하는것", "떡볶이")
